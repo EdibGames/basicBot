@@ -3519,7 +3519,7 @@
             },
 
             welcomeCommand: {
-                command: 'welcome',
+                command: 'Dobro Došli na Balkan Party <3',
                 rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -3527,7 +3527,7 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         if (basicBot.settings.welcome) {
-                            basicBot.settings.welcome = !basicBot.settings.welcome;
+                            basicBot.settings.welcome= !basicBot.settings.welcome;
                             return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.welcomemsg}));
                         }
                         else {
@@ -3631,7 +3631,7 @@
 
             youtubeCommand: {
                 command: 'youtube',
-                rank: 'user',
+                rank: 'Youtube',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
